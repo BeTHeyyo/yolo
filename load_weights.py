@@ -1,6 +1,9 @@
 """Loads Yolo v3 pretrained weights and saves them in tensorflow format."""
 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+
+tf.disable_v2_behavior()
+
 import numpy as np
 
 from yolo_v3 import Yolo_v3
